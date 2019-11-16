@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <title>휴비스</title>
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/main.css">
+    <!--[if lt IE 9]>
+        <script type="text/javascript" src="js/html5shiv.min.js"></script>
+    <![endif]-->
+    <script src="js/jquery-1.12.4.min.js"></script>
+    <script src="js/jquery.bxslider.min.js"></script>
+    <script src="js/common.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+        $(document).ready(function(){
+            //팝업창
+            $("#popupZone button").on("click", function(){
+                var btnNum = $(this).index();
+                if(btnNum == 1) window.open("popup/pop.html", "popupNews", "width=370, height=554, top=150, left=100"); //open, close는 제이쿼리가 아니고 자바스크립트 명령어
+                $(this).parent().hide();
+                $("#header").css({marginTop: 0});
+            });
+
+            //적용시키려는 슬라이더의 내용 호출
+            $("#mainSlider .visual").bxSlider({
+                mode: 'fade',
+                auto : true,
+                pause : 3000,
+                controls : true,
+                nextText : "다음 슬라이더 보기",
+                prevText : "이전 슬라이더 보기",
+                autoControls : true,
+                startText : "애니메이션 시작",
+                stopText : "애니메이션 정지",
+                pager : true,
+            });
+        });
+    </script>
+</head>
+<body>
+    <div id="skip">
+        <a href="#content">본문 바로가기</a>
+    </div>
+
+    <div id="popupZone">
+        <p>휴비스에서 알려드리는 공지가 있습니다. 팝업을 확인하시겠습니까?</p>
+        <button type="button" class="pop_yes" title="새창열기">예</button> <!-- 접근성을 위해 title 추가하기 : 팝업열릴때(스크립트 window.open()로 팝업창을 열 경우 반드시) -->
+        <button type="button" class="pop_no">아니오</button>
+    </div>
+    
+    <header id="header" class="clearfix">
+        <div class="max_area">
+            <h1 class="logo f_l">
+                <a href="#"><img src="images/common/logo.gif" alt="휴비스"></a>
+            </h1>
+            <!-- //logo -->
+
+            <div class="util f_r">
+                <h2 class="blind">언어선택</h2>
+                <ul class="lang">
+                    <li><a href="#">KOR</a></li>
+                    <li><a href="#">ENG</a></li>
+                    <li><a href="#">CHN</a></li>
+                </ul>
+                <h2 class="blind">빠른 링크</h2>
+                <ul class="quick">
+                    <li><a href="#">공개구매</a></li>
+                    <li><a href="#">인트라넷</a></li>  
+                </ul>
+            </div>
+            <!-- //utill -->
+
+            <nav id="gnb">
+                <h2 class="blind">주메뉴</h2>
+                <ul>
+                    <li class="gnb1">
+                        <a href="#">회사소개</a>
+                        <div>
+                            <ul>
+                                <li><a href="#">기업정보</a></li>
+                                <li><a href="#">CEO인사말</a></li>
+                                <li><a href="#">사업분야</a></li>
+                                <li><a href="#">사업장소개</a></li>
+                                <li><a href="#">R&D</a></li>
+                                <li><a href="#">지속가능경영</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="gnb2">
+                        <a href="#">제품소개</a>	
+                        <div>
+                            <ul>
+                                <li><a href="#">단섬유</a></li>
+                                <li><a href="#">장섬유</a></li>
+                                <li><a href="#">PET레진</a></li>
+                                <li><a href="#">슈퍼섬유</a></li>
+                                <li><a href="#">산업자재용 소재</a></li>
+                                <li><a href="#">제품 자료실</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="gnb3">
+                        <a href="#">투자정보</a>
+                        <div>
+                            <ul>
+                                <li><a href="#">경영정보</a></li>
+                                <li><a href="#">재무정보</a></li>
+                                <li><a href="#">주식정보</a></li>
+                                <li><a href="#">공시정보</a></li>
+                                <li><a href="#">IR자료실</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="gnb4">
+                        <a href="#">홍보센터</a>
+                        <div>	
+                            <ul>
+                                <li><a href="#">뉴스</a></li>
+                                <li><a href="#">홍보자료실</a></li>
+                                <li><a href="#">생활 속 휴비스</a></li>
+                            </ul>
+                        </div>	
+                    </li>
+                    <li class="gnb5">
+                        <a href="#">인재채용</a>
+                        <div>	
+                            <ul>
+                                <li><a href="#">인재상</a></li>
+                                <li><a href="#">인사제도</a></li>
+                                <li><a href="#">직무소개</a></li>
+                                <li><a href="#">채용정보</a></li>
+                                <li><a href="#">채용문의</a></li>
+                                <li><a href="#" class="blog">휴비스 블로그</a></li>
+                            </ul>
+                        </div>		
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <!-- //gnb -->
+    </header>
+
+    <nav id="indicator">
+        <h2 class="blind">섹션별 컨텐츠 바로가기</h2>
+        <ul>
+            <li class="list1">
+                <a href="#cnt1"><span>MAIN</span></a>
+            </li>
+            <li class="list2">
+                <a href="#cnt2"><span>ABOUT US</span></a>
+            </li>
+            <li class="list3">
+                <a href="#cnt3"><span>PRODUCTS</span></a>
+            </li>
+            <li class="list4">
+                <a href="#cnt4"><span>PR CENTER</span></a>
+            </li>
+            <li class="list5">
+                <a href="#cnt5"><span>Huvistory</span></a>
+            </li>
+        </ul>
+    </nav>
+
+    <section id="content">
+        <h2 class="blind">휴비스 소개</h2>
+        <article id="cnt1">
+            <h3 class="blind">Main</h3>
+            <div id="mainSlider">
+                <ul class="visual">
+                    <li><!-- 배경이미지가 100%일때는 background, 꽉안차면 img -->
+                        <p class="kr">소재의 무한한 가능성</p>
+                        <p class="en">The Infinite potential of Materials</p>
+                    </li>
+                    <li>
+                        <p class="kr">더 나은 세상을 위한 기술</p>
+                        <p class="en">Technology for better life</p>
+                    </li>
+                    <li>
+                        <p class="kr">더 나은 성과를 위한 기술</p>
+                        <p class="en">Technology for better performance</p>
+                    </li>
+                    <li>
+                        <p class="kr">더 나은 안전을 위한 기술</p>
+                        <p class="en">Technology for better safety</p>
+                    </li>
+                </ul>
+            </div>
+            <ul class="main_link p_a">
+                <li><a href="#">회사소개</a></li>
+                <li><a href="#">제품소개</a></li>
+                <li><a href="#">채용공지</a></li>
+            </ul>
+        </article>
+
+        <article id="cnt2">
+            <h3>ABOUT US</h3>
+            <p>소재의 무한한 가능성! 소재의 발전은 우리의 삶을 보다 풍요롭게 합니다.</p>
+            <div class="clearfix">
+                <ul class="about clearfix">
+                    <li class="list1">
+                        <h4>회사개요</h4>
+                        <p>발전된 소재 기술이 인간의<br>삶을 보다 풍요롭게 한다는<br>믿음 아래 인간을 향한 소재<br>기술을 연구합니다.</p>
+                        <a href="#">자세히 보기</a>
+                    </li>
+                    <li class="list2">
+                        <h4>사업분야</h4>
+                        <p>폴리에스터 섬유부터<br>슈퍼섬유, 산업자재용 소재 및<br>수처리 
+                            시스템까지 다양한<br>소재를 개발하고 있습니다.</p>
+                        <a href="#">자세히 보기</a>
+                    </li>
+                    <li class="list3">
+                        <h4>R&amp;D</h4>
+                        <p>끊임없는 연구개발,<br>세계 최고 수준의 R&amp;D<br>기술력으로 최첨단 소재<br>개발에 앞장서고 있습니다.</p>
+                        <a href="#">자세히 보기</a>
+                    </li>
+                    <li class="list4">
+                        <h4>사업장소개</h4>
+                        <p>최고 품질의 제품을<br>생산하는 혁신과 도전의 현장, 휴비스 사업장을 소개합니다.</p>
+                        <a href="#">자세히 보기</a>
+                    </li>
+                </ul>
+                <div class="news">
+                    <h4><a href="">휴비스 뉴스</a></h4>
+                    <ul>   			
+                        <li>
+                            <em class="bg_gray">공통</em>
+                            <a href="#">
+                                <span class="tit">휴비스, 2019 2Q 연결 기준 매출 2,701억원, 영업이익 2억원</span>
+                                <span class="date">2019.08.14</span>
+                            </a>
+                        </li>
+                        <li>
+                            <em class="bg_dblue">휴비스</em>
+                            <a href="#">
+                                <span class="tit">휴비스 박성윤 연구소장, 제54회 발명의 날 ‘은탑산업훈장’ 수상</span>
+                                <span class="date">2019.05.28</span>
+                            </a>
+                        </li>
+                        <li>
+                            <em class="bg_dblue">휴비스</em>
+                            <a href="#">
+                                <span class="tit">휴비스, 슈퍼섬유로 ‘유럽 산업용 소재 시장’ 글로벌 마케팅 박차</span>
+                                <span class="date">2019.05.14</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="news">
+                    <h4><a href="">나눔 소식</a></h4>
+                    <ul>  
+                        <li>
+                            <em class="bg_wblue">전주</em>
+                            <a href="#">
+                                <span class="tit">국가대표 축구선수를 꿈꾸다!</span>
+                                <span class="date">2019.06.10</span>
+                            </a>
+                        </li>
+                        <li>
+                            <em class="bg_wblue">전주</em>
+                            <a href="#">
+                                <span class="tit">함께하는 세상을 그려요~!</span>
+                                <span class="date">2019.02.11</span>
+                            </a>
+                        </li>
+                        <li>
+                            <em class="bg_wblue">전주</em>
+                            <a href="#">
+                                <span class="tit">축구 꿈나무들의 꿈을 응원합니다~</span>
+                                <span class="date">2018.05.25</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </article>
+
+        <article id="cnt3">
+            <h3>PRODUCTS</h3>
+            <p>차별화된 기술력과 노하우로 삶의 가치를 높이는 고부가가치 소재를 생산하고 있습니다.</p>
+            <ul class="prodcut_list clearfix">
+                <li class="list1">
+                    <h4>단섬유</h4>
+                    <p>단섬유는 의류용뿐만 아니라 산업용으로 광범위하게 사용됩니다.</p>
+                    <button type="button">자세히 보기</button>
+                    <ul>
+                        <li><a href="">소개</a></li>
+                        <li><a href="">방적용</a></li>
+                        <li><a href="">부직포용</a></li>
+                        <li><a href="">Special</a></li>
+                        <li><a href="">충전용</a></li>
+                    </ul>
+                </li>
+                <li class="list2">
+                    <h4>장섬유</h4>
+                    <p>장섬유는 주로 정장, 기능성 의류, 인테리어 등 다양한 용도로 사용됩니다.</p>
+                    <button type="button">자세히 보기</button>
+                    <ul>
+                        <li><a href="">소개</a></li>
+                        <li><a href="">Apparel</a></li>
+                        <li><a href="">Casual Sports</a></li>
+                        <li><a href="">Interior</a></li>
+                        <li><a href="">Eco Products</a></li>
+                    </ul>
+                </li>
+                <li class="list3">
+                    <h4>PET레진</h4>
+                    <p>PET 레진은 섬유용, 페트병용, 용기 제작용으로 사용됩니다.</p>
+                    <button type="button">자세히 보기</button>
+                    <ul>
+                        <li><a href="">소개</a></li>
+                        <li><a href="">섬유용</a></li>
+                        <li><a href="">고상</a></li>
+                        <li><a href="">Specialty</a></li>
+                    </ul>
+                </li>
+                <li class="list4">
+                    <h4>슈퍼섬유</h4>
+                    <p>아라미드, PPS 섬유 등 최첨단 슈퍼 섬유 개발에 앞장서고 있습니다.</p>
+                    <button type="button">자세히 보기</button>
+                    <ul>
+                        <li><a href="">소개</a></li>
+                        <li><a href="">아라미드</a></li>
+                        <li><a href="">PPS</a></li>
+                    </ul>
+                </li>
+                <li class="list5">
+                    <h4>산업자재용 소재</h4>
+                    <p>농업, 공업, 건축 등 산업의 근간이 되는 다양한 분야에 사용됩니다.</p>
+                    <button type="button">자세히 보기</button>
+                    <ul>
+                        <li><a href="">소개</a></li>
+                        <li><a href="">건축/자동차용부직포</a></li>
+                        <li><a href="">고강력사</a></li>
+                        <li><a href="">스펀본드</a></li>
+                        <li><a href="">지오그리드</a></li>
+                        <li><a href="">모노필라멘트</a></li>
+                    </ul>
+                </li>
+                <li class="list6">
+                    <h4>제품자료실</h4>
+                    <p>휴비스 제품에 대한 다양한 정보를 보실 수 있습니다.</p>
+                    <button type="button">자세히 보기</button>
+                </li>
+            </ul>
+        </article>
+
+        <article id="cnt4">
+            <h3>PR CENTER</h3>
+            <p>휴비스를 소개하는 영상과 회사소개서를 확인하실 수 있습니다.</p>
+            <ul class="clearfix">
+                <li>
+                    <a href="">홍보동영상<img src="images/main/btn_video_company.png" alt=""></a>
+                </li>
+                <li>
+                    <a href="">CI 스토리<img src="images/main/btn_ci_company.png" alt=""></a>
+                </li>
+                <li>
+                    <a href="">회사소개서<img src="images/main/btn_catalog_company.png" alt=""></a>
+                </li>
+            </ul>
+        </article>
+
+        <article id="cnt5">
+            <h3>생활 속 휴비스</h3>
+            <p>더 좋은 세상을 위한 소재 기술을 만들어 가는 휴비스,<br>우리 생활 곳곳에서 항상 함께하는 휴비스를 지금 만나보세요.</p>
+            <div id="storyTab">
+                <ul class="tablist clearfix" role="tablist" aria-label="휴비스 기술소개">
+                    <li id="tab1" class="tab first" role="tab" aria-controls="tabpanel1">Business</li>
+                    <li id="tab2" class="tab" role="tab" aria-controls="tabpanel2">Home</li>
+                    <li id="tab3" class="tab last" role="tab" aria-controls="tabpanel3">Outdoor</li>
+                </ul>
+                <div id="tabpanel1" class="tabpanel" role="tabpanel" aria-labelledby="tab1">
+                    <div class="bg">
+                        <h4>Business in Huvis</h4>
+                        <p>자동차와 사무실, 그리고 즐겨입는 정장까지...<br>비즈니스 환경 속에서 만날 수 있는 다양한 휴비스 제품들<br><br>비즈니스 속 휴비스 이야기, 지금 만나보세요!</p>
+                        <button type="button" data-index="0">새창열기 - 동영상</button><!-- 스크립트로 window.open() 반드시 새창으로 열림을 알려줘야함 -->
+                    </div>
+                    <a href="#"><span class="blind"></span>자세히 보기</a>
+                </div>
+                <div id="tabpanel2" class="tabpanel" role="tabpanel" aria-labelledby="tab2">
+                    <div class="bg">
+                        <h4>Home in Huvis</h4>
+                        <p>침구류와 커튼 소재, 즐겨 입는 운동복과 아기 기저귀까지...<br>집 안에서 만날 수 있는 다양한 휴비스 제품들,<br><br>우리 집 휴비스 이야기, 지금 만나보세요!</p>
+                        <button type="button" data-index="1">새창열기 - 동영상</button>
+                    </div>
+                    <a href="#"><span class="blind"></span>자세히 보기</a>
+                </div>
+                <div id="tabpanel3" class="tabpanel" role="tabpanel" aria-labelledby="tab3">
+                    <div class="bg">
+                        <h4>Outdoor in Huvis</h4>
+                        <p>기능성 스포츠 의류, 캐주얼 의류, 신발 그리고 식품용기까지...<br>생활 곳곳에서 만날 수 있는 휴비스 제품들<br><br>아웃도어 휴비스 이야기, 지금 만나보세요!</p>
+                        <button type="button" data-index="2">새창열기 - 동영상</button>
+                    </div>
+                    <a href="#"><span class="blind"></span>자세히 보기</a>
+                </div>
+            </div>
+        </article>
+    </section>
+
+    <footer id="footer">
+        <div class="max-area clearfix">
+            <p class="copyright f_l">Copyright &copy; Huvis All Rights Reserved</p>
+            <div class="foot_right f_r">
+                <ul class="foot_quick">
+                    <li>
+                        <a href="">공개구매</a>
+                    </li>
+                    <li>
+                        <a href="">인트라넷</a>
+                    </li>
+                </ul>
+                <ul class="foot_link">
+                    <li>
+                        <a href="">고객센터</a>
+                    </li>
+                    <li>
+                        <a href="">이용약관</a>
+                    </li>
+                    <li>
+                        <a href="">이메일무단수집거부</a>
+                    </li>
+                    <li class="wihte_bold">
+                        <a href="">개인정보취급방침</a>
+                    </li>
+                    <li>
+                        <a href="">사이트맵</a>
+                    </li>
+                </ul>
+                <div class="family">
+                    <a href="" class="site" role="button">Family Site</a>
+                    <ul>
+                        <li><a href="http://www.huvis.com.cn/chi/" target="_blank">사천휴비스</a></li>
+                        <li><a href="http://huvisglobal.com/kr/" target="_blank">휴비스글로벌</a></li>
+                        <li><a href="http://blog.huvis.com/" target="_blank">휴비스블로그</a></li>
+                    </ul>
+                    <a href="" class="go">GO</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

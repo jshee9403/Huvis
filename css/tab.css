@@ -1,0 +1,76 @@
+/* variable */
+#storyTab {
+  text-align: center; }
+  #storyTab ul li {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    float: left;
+    width: 380px;
+    height: 50px;
+    line-height: 50px;
+    font-size: 18px;
+    color: #000;
+    background: #f2f2f2;
+    border: 1px solid #ccc;
+    margin-bottom: 30px;
+    cursor: pointer; }
+    #storyTab ul li + li {
+      margin-left: 15px; }
+    #storyTab ul li:hover, #storyTab ul li.active {
+      background: #00265b;
+      color: #fff;
+      border-color: #00265b; }
+
+#storyTab .tabpanel {
+  display: none;
+  height: 600px;
+  color: #fff; }
+  #storyTab .tabpanel.active {
+    display: block; }
+  #storyTab .tabpanel .bg {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    background: no-repeat left top;
+    height: 530px;
+    padding-top: 163px;
+    cursor: pointer; }
+    #storyTab .tabpanel .bg h4 {
+      font-size: 74px;
+      font-weight: 700;
+      line-height: 111px; }
+    #storyTab .tabpanel .bg p {
+      position: relative;
+      line-height: 22px;
+      padding-top: 30px; }
+      #storyTab .tabpanel .bg p:before {
+        content: '';
+        width: 60px;
+        height: 3px;
+        background: #fff;
+        position: absolute;
+        top: 0;
+        left: 50%;
+        margin-left: -30px; }
+  #storyTab .tabpanel#tabpanel1 .bg {
+    background-image: url(../images/main/img_life1.jpg); }
+  #storyTab .tabpanel#tabpanel2 .bg {
+    background-image: url(../images/main/img_life2.jpg); }
+  #storyTab .tabpanel#tabpanel3 .bg {
+    background-image: url(../images/main/img_life3.jpg); }
+  #storyTab .tabpanel a {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    float: right;
+    text-align: left;
+    padding-left: 43px;
+    width: 180px;
+    height: 40px;
+    font-size: 14px;
+    line-height: 40px;
+    background: #999 url(../images/main/arr_more.png) no-repeat 119px 50%;
+    margin-top: 30px; }
+
+/*# sourceMappingURL=tab.css.map */

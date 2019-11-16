@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <title> bx slider </title>
+    <link rel="stylesheet" href="css/slider.css">
+    <script src="js/jquery-1.12.4.min.js"></script>
+    <script src="js/jquery.bxslider.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            //적용시키려는 슬라이더의 내용 호출
+            $("#mainSlider .visual").bxSlider({
+                mode: 'fade',
+                auto : true,
+                pause : 3000,
+                controls : true,
+                nextText : "다음 슬라이더 보기",
+                prevText : "이전 슬라이더 보기",
+                autoControls : true,
+                startText : "애니메이션 시작",
+                stopText : "애니메이션 정지",
+                pager : true,
+            });
+        });
+    </script>
+</head>
+<body>
+    <div id="mainSlider">
+        <ul class="visual">
+            <li><!-- 배경이미지가 100%일때는 background, 꽉안차면 img -->
+                <p class="kr">소재의 무한한 가능성</p>
+                <p class="en">The Infinite potential of Materials</p>
+            </li>
+            <li>
+                <p class="kr">더 나은 세상을 위한 기술</p>
+                <p class="en">Technology for better life</p>
+            </li>
+            <li>
+                <p class="kr">더 나은 성과를 위한 기술</p>
+                <p class="en">Technology for better performance</p>
+            </li>
+            <li>
+                <p class="kr">더 나은 안전을 위한 기술</p>
+                <p class="en">Technology for better safety</p>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>

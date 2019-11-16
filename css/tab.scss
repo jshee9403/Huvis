@@ -1,0 +1,84 @@
+@charset "utf-8";
+@import "_mixin";
+@import "_var";
+
+#storyTab {
+    text-align: center;
+    
+    ul {
+
+        li {
+            @include boxSizing;
+            float: left; 
+            width: 380px; height: 50px; 
+            line-height: 50px; 
+            font-size: 18px; 
+            color: #000; 
+            background: #f2f2f2; 
+            border: 1px solid #ccc; 
+            margin-bottom: 30px;
+            cursor: pointer;
+    
+            & + li {margin-left: 15px;}
+    
+            &:hover, &.active {
+                background: $dBlue;
+                color: #fff;
+                border-color: $dBlue;
+            }
+
+        }
+    }
+}
+
+
+#storyTab .tabpanel {
+    display: none;
+    height: 600px;
+    color: #fff;
+
+    &.active {display: block;}
+
+    .bg {
+        @include boxSizing;
+        background: no-repeat left top;
+        height: 530px;
+        padding-top: 163px;
+        cursor: pointer;
+
+        h4 {
+            font-size: 74px; font-weight: 700;
+            line-height: 111px;
+        }
+
+        p {
+            position: relative;
+            line-height: 22px;
+            padding-top: 30px;
+
+            &:before {
+                content:''; width: 60px; height: 3px; background: #fff; position: absolute; top: 0; left: 50%; margin-left: -30px;
+            }
+        }
+
+        button {}
+    }
+
+
+    &#tabpanel1 .bg {background-image: url(../images/main/img_life1.jpg);}
+    &#tabpanel2 .bg {background-image: url(../images/main/img_life2.jpg);}
+    &#tabpanel3 .bg {background-image: url(../images/main/img_life3.jpg);}
+
+    a {
+        @include boxSizing;
+        float: right;
+        text-align: left;
+        padding-left: 43px;
+        width: 180px; height: 40px;
+        font-size: 14px;
+        line-height: 40px;
+        background: #999 url(../images/main/arr_more.png) no-repeat 119px 50%;
+        margin-top: 30px;
+
+    }
+}

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <title> 탭컨텐츠 접근성 제어 </title>
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/tab.css">
+    <script src="js/jquery-1.12.4.min.js"></script>
+    <script src="js/tab.js"></script>
+</head>
+<body>
+    <div class="area">
+    <div id="storyTab">
+        <ul class="tablist clearfix" role="tablist" aria-label="휴비스 기술소개">
+            <li id="tab1" class="tab first" role="tab" aria-controls="tabpanel1">Business</li>
+            <li id="tab2" class="tab" role="tab" aria-controls="tabpanel2">Home</li>
+            <li id="tab3" class="tab last" role="tab" aria-controls="tabpanel3">Outdoor</li>
+        </ul>
+        <div id="tabpanel1" class="tabpanel" role="tabpanel" aria-labelledby="tab1">
+            <div class="bg">
+                <h4>Business in Huvis</h4>
+                <p>자동차와 사무실, 그리고 즐겨입는 정장까지...<br>비즈니스 환경 속에서 만날 수 있는 다양한 휴비스 제품들<br><br>비즈니스 속 휴비스 이야기, 지금 만나보세요!</p>
+                <button type="button" data-index="0">새창열기 - 동영상</button><!-- 스크립트로 window.open() 반드시 새창으로 열림을 알려줘야함 -->
+            </div>
+            <a href="#"><span class="blind"></span>자세히 보기</a>
+        </div>
+        <div id="tabpanel2" class="tabpanel" role="tabpanel" aria-labelledby="tab2">
+            <div class="bg">
+                <h4>Home in Huvis</h4>
+                <p>침구류와 커튼 소재, 즐겨 입는 운동복과 아기 기저귀까지...<br>집 안에서 만날 수 있는 다양한 휴비스 제품들,<br><br>우리 집 휴비스 이야기, 지금 만나보세요!</p>
+                <button type="button" data-index="1">새창열기 - 동영상</button>
+            </div>
+            <a href="#"><span class="blind"></span>자세히 보기</a>
+        </div>
+        <div id="tabpanel3" class="tabpanel" role="tabpanel" aria-labelledby="tab3">
+            <div class="bg">
+                <h4>Outdoor in Huvis</h4>
+                <p>기능성 스포츠 의류, 캐주얼 의류, 신발 그리고 식품용기까지...<br>생활 곳곳에서 만날 수 있는 휴비스 제품들<br><br>아웃도어 휴비스 이야기, 지금 만나보세요!</p>
+                <button type="button" data-index="2">새창열기 - 동영상</button>
+            </div>
+            <a href="#"><span class="blind"></span>자세히 보기</a>
+        </div>
+    </div>
+    </div>
+</body>
+</html>
+
